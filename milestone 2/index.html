@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Static Interactive Resume Builder</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="main.js" defer></script> <!-- Link to the compiled JavaScript file -->
+</head>
+<body>
+    <div id="container">
+        <h1 id="h">Static Interactive Resume Builder</h1>
+        <form id="resume-form">
+            <fieldset>
+                <legend><b>Personal Information</b></legend>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="Email">Email:</label>
+                <input type="text" id="Email" name="Email" required>
+
+                <label for="Phone">Phone:</label>
+                <input type="number" id="Phone" name="Phone" required>
+
+                <label>Gender:</label>
+                <label>
+                    <input type="radio" name="gender" value="male" required>
+                    Male
+                </label>
+                <label>
+                    <input type="radio" name="gender" value="female">
+                    Female
+                </label>
+                <label>
+                    <input type="radio" name="gender" value="other">
+                    Other
+                </label>
+            </fieldset>
+            <fieldset>
+                <legend><b>Education</b></legend>
+                <label for="education">Choose:</label>
+                <select id="education" name="education" required>
+                    <option value="">--Please choose an option--</option>
+                    <option value="highschool">High School Diploma</option>
+                    <option value="associatedegree">Associate Degree</option>
+                    <option value="bachelorsdegree">Bachelor's Degree</option>
+                    <option value="mastersdegree">Master's Degree</option>
+                    <option value="doctorate">Doctorate (PhD)</option>
+                    <option value="noformal_education">No Formal Education</option>
+                    <option value="other">Other</option>
+                </select>
+            </fieldset>
+            <fieldset>
+                <legend><b>Experience</b></legend>
+                <textarea name="experience" id="experience" placeholder="Type your Experience"></textarea>
+            </fieldset>
+            <fieldset>
+                <legend><b>Skills</b></legend>
+                <textarea name="skills" id="skills" placeholder="Type your Skills"></textarea>
+            </fieldset>
+            <button type="submit">Generate Resume</button>
+        </form>
+        <div id="resume-output"></div> <!-- Output will be displayed here -->
+    </div>
+</body>
+</html>
